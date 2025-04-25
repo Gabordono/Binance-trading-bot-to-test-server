@@ -1,0 +1,53 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>cfc44fbd-4631-4a75-b37c-ed4171f6f438</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>main.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>main</Name>
+    <RootNamespace>main</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="feedback_gui.py" />
+    <Compile Include="feedback_learning.py" />
+    <Compile Include="main.py" />
+    <Compile Include="prediction\MI_Strategy.py" />
+    <Compile Include="prediction\__init__.py" />
+    <Compile Include="Signal_Generator.py" />
+    <Compile Include="Strategy_Factory.py" />
+    <Compile Include="asset_checker.py" />
+    <Compile Include="trade\Multi_trade_Manager.py" />
+    <Compile Include="trade\Symbol_Trader.py" />
+    <Compile Include="trade\Trade_executor.py" />
+    <Compile Include="trade\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="trade\" />
+    <Folder Include="prediction\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config.json" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>

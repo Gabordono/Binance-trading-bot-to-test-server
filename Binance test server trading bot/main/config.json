@@ -1,0 +1,10 @@
+{
+  "api_key": "",
+  "api_secret": "",
+  "strategy": "ml",
+  "symbols": [ "BTCUSDT", "ETHUSDT", "LTCUSDT" ],
+  "max_positions": 3,
+  "interval_sec": 300,
+  "api_url": "https://testnet.binance.vision/api"
+}
+
